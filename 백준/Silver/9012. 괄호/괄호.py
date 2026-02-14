@@ -1,15 +1,18 @@
 n = int(input())
 for i in range(n):
-    vps = input().strip()
-    count = 0
-    for j in vps:
-        if j == "(":
-            count += 1
+    vps = input()
+    arr = []
+    for j in range(len(vps)):
+        if vps[j] == "(":
+            arr.append("(")
         else:
-            count -= 1
-        if count < 0:
-            break
-    if count == 0:
-        print("YES")
+            if arr == []:
+                print("NO")
+                break
+            else:
+                arr.pop()
     else:
-        print("NO")
+        if arr == []:
+            print("YES")
+        else:
+            print("NO")
