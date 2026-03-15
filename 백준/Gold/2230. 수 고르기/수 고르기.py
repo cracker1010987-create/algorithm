@@ -3,9 +3,7 @@ input = sys.stdin.readline
 
 
 n, m = map(int, input().split())
-nums = []
-for _ in range(n):
-    nums.append(int(input()))
+nums = [int(input()) for _ in range(n)]
 
 nums.sort()
 
